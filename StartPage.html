@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- @Author: 1809853Z-I011-0045 Wang Yuyang (Kennard Wang) -->
+        <title>StartPage.html</title>
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <link rel="stylesheet" type="text/css" href="project.css">
+        <script>
+            
+            function start(URL){
+                window.location.href = URL;
+            }
+
+            function init(){
+                var radius = 55;
+                var flag = false;
+                var num1 = 0;
+                var num2 = 0;
+                var num3 = 0;
+                var flagColor = true;
+
+                setInterval(function(){
+                    dynamicImg(radius);
+
+                    if(radius==0){flag = true;}
+                    else if(radius==55){flag = false;}
+
+                    if(flag){radius++;}
+                    else{ radius--;}
+                   
+                },80);
+
+                setInterval(function(){
+                    changeColor(num1, num2, num3);
+
+                    if(num1==0 && num2 == 0 && num3 ==0){flagColor = true;}
+                    if(num1==255 && num2 == 255 && num3 ==255){flagColor = false;}
+
+                    if(flagColor){
+                        if(num1==255){
+                            if(num2==255){
+                                num3++;
+                            }
+                            else{num2++;}
+                        }
+                        else{num1++;}
+                    }
+                    else{
+                        if(num1==0){
+                            if(num2==0){
+                                num3--;
+                            }
+                            else{num2--;}
+                        }
+                        else{num1--;}
+                    }
+
+                },10);
+            }
+
+            function checkSelect(e){
+               
+                console.log(e.checked);
+                if(e.checked){
+                    document.getElementById("Form").action = "GameOld.html";
+                }
+                else{
+                    document.getElementById("Form").action = "Game.html";
+                }
+            }
+
+            function dynamicImg(num){
+                var e = document.getElementById("titleimg");
+                e.style.setProperty("border-radius", String(num) + "%");
+            }
+
+            function changeColor(num1, num2, num3){
+                var e = document.getElementById("titletxt");
+                e.style.setProperty("color","rgb("+ String(num1) + "," + String(num2) + "," + String(num3) + ")");
+            }
+
+            function buttonDown(eid){
+                eid.style.setProperty("color","black");
+                eid.style.setProperty("background-color","rgba(114, 114, 114, 0.7)");
+            }
+
+            function buttonRelease(eid){
+                eid.style.setProperty("color","azure");
+                eid.style.setProperty("background-color","rgba(20, 20, 20, 0.7)");
+            }
+
+
+        </script>
+    </head>
+
+    <body class = "background" onload="init();">
+        <!--Background Img-->
+        <img class="bgimg" src="imgsrc/bgimg.bmp" alt="background">
+
+        <!--Title Block-->
+        <div class = "title" >
+            <h1 id = "titletxt" style="color: black;">24 Points</h1>
+            <img id = "titleimg" src="imgsrc/title.jpg" alt="24points" height="256" width="256" style="border-radius: 50%;">    
+        </div>
+        <br><br>
+        
+         <!--Card Display-->
+        <div>
+            <table border="5">
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr>
+                <td></td>
+                <td><img src="imgsrc/unknown.jpg" alt="?" width="90" height="122"></td>
+                <td></td>
+                <td><img src="imgsrc/unknown.jpg" alt="?" width="90" height="122"></td>
+                <td></td>
+                <td><img src="imgsrc/unknown.jpg" alt="?" width="90" height="122"></td>
+                <td></td>
+                <td><img src="imgsrc/unknown.jpg" alt="?" width="90" height="122"></td>
+                <td></td>
+                </tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+            </table>
+        </div>
+        <br><br>
+
+        <!--Start-->
+        <form id="Form" action="Game.html" method="GET">          
+        
+        <fieldset>
+        <div id="modeset">
+            <label style="color: #ffff00;"><em>Mode Selection: </em> &nbsp; &nbsp;
+                <select name="select" id="mode">
+                    <option value="1" selected="selected">Normal</option>
+                    <option value="2">Hard</option>
+                </select>
+            </label>
+            <label style="color: azure;"><input type="checkbox" onclick="checkSelect(this);">Use old form?</label>
+        <br>
+        <input id="start" type="submit" name = "submit" value="Start Game" onmousedown="buttonDown(this);" onmouseup="buttonRelease(this);">
+        </div>
+        </fieldset>
+
+        </form>
+    </body>
+</html>
