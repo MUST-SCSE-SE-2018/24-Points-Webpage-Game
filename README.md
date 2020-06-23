@@ -18,7 +18,7 @@
 + IDE : **Visual Studio Code 1.46.0**
 ------
 ### Visit Method
-+ Quick Visit : https://kennardwang.github.io/24Points_Webpage/login.html
++ Quick Visit : https://kennardwang.github.io/24Points_WebpageGame/login.html
 + Local Visit : **Download ZIP file and visit via your own PC**
 ------
 ### Attention
