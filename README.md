@@ -1,4 +1,4 @@
-# 24Points_Webpage
+# 24-Point-Game_Webpage
 ### Game Demo
 + New Form
 
