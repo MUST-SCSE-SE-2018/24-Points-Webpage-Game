@@ -22,8 +22,8 @@
 | IDE | Visual Studio Code 1.46.0 |
 
 ------
-### How to play ?
-+ Quick Start : https://kennardwang.github.io/24-Points-Game_Webpage/html/
+### How To Play ?
++ Start from here : https://kennardwang.github.io/24-Points-Game_Webpage/html/
 
 ------
 ### Attention
