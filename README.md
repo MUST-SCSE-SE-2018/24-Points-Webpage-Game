@@ -2,33 +2,33 @@
 ### Game Demo
 + New Version
 
-![new](https://kennardwang.github.io/ImageSource/Project/24pointsNew.png)
+![new](https://kennardwang.github.io/ImageSource/24-Points-Game_Webpage/24pointsNew.png)
 
 + Old Version
 
-![old](https://kennardwang.github.io/ImageSource/Project/24pointsOld.png)
+![old](https://kennardwang.github.io/ImageSource/24-Points-Game_Webpage/24pointsOld.png)
 
 + Grade Board
 
-![grade](https://kennardwang.github.io/ImageSource/Project/24pointsGrade.png)
+![grade](https://kennardwang.github.io/ImageSource/24-Points-Game_Webpage/24pointsGrade.png)
 
 ------
 ### Development Environment
 
 | Description | Specification |
 |:---:|:---:|
-| System | Windows10 |
+| System | Windows 10 |
 | Language | HTML, CSS, Javascript |
 | IDE | Visual Studio Code 1.46.0 |
 
 ------
 ### How to play ?
-+ Quick Start : https://kennardwang.github.io/24-Point-Game_Webpage/login.html
++ Quick Start : https://kennardwang.github.io/24-Points-Game_Webpage/
 
 ------
 ### Attention
 + Please start game on StartPage.html. If you enter Game.html page directly, you will find it is just a static webpage!
-+ In login.html
++ In index.html
   > The only Player Name/Password is **Kennard/WangYuyang**, otherwise you probably cannot go to the next page! 
 + In StartPage.html
   > Different mode will generate different cards. In Normal mode, the range of cards is **1~9**. But under Hard mode, the range is **1~13**. ( J represents 11, Q represents 12 and K represents 13 ) If you choose old form, it means you want to play with keyboard input.

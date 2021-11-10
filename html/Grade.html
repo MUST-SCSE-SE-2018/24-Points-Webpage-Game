@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- @Author: 1809853Z-I011-0045 Wang Yuyang (Kennard Wang) -->
+        <title>Grade.html</title>
+        <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+        <link rel="stylesheet" type="text/css" href="../css/project.css">
+        <script>
+
+            // global variable
+            var Names = ["Kotoko","Yumeko","Haru","Suzune","Shiro","Kurisu","Kazuki","Mr.Hole"];
+            var Ages = [17, 19, 23, 16, 11, 19, 23, 25];
+            var Froms = ["Invented Inference","Kakegurui","ID:INVADED","Classroom of the Elite","No Game No Life","Steins Gate","Grisaia","ID:INVADED"];
+            var Points = [4680, 4752, 4632, 4584, 4848, 4776, 4704, 5994];
+            var Ranks = [6, 4, 7, 8, 2, 3, 5, 1];
+            var Players = [];
+
+            // define a class
+            class Player{
+                
+                // constructor
+                constructor(n, a, f, p, r){
+                    this.Nickname = n;
+                    this.Age = a;
+                    this.From = f;
+                    this.Point = p;
+                    this.Rank = r;
+                }
+
+                // method
+                setData(id){
+                    var e = document.getElementById(id);
+                    e.innerHTML = '<div style="text-align: center;"> <img src="../imgsrc/profile/' + this.Nickname +'.jpg" alt="profile"> </div> <div> <ul> ' +
+                    '<li>Nickname: '+ this.Nickname +'</li><li>Age: '+ this.Age + '</li><li>From: ' + this.From + '</li>' +
+                    '<li>Point: ' + this.Point +'</li><li>#Rank: ' + this.Rank +'</li></ul></div></div> ';
+                } 
+            }
+
+            function init(){
+                for(var i = 0; i < Names.length; ++i){
+                    var p = new Player(Names[i], Ages[i], Froms[i], Points[i], Ranks[i]);
+                    p.setData(String(i));
+                    Players.push(p);
+                }
+            }
+
+            function swap(i, j){
+                var tmp = Players[i];
+                Players[i] = Players[j];
+                Players[j] = tmp;
+            }
+          
+            function findName(){
+                var min = "Zzzzzzz";
+                for(var i = 0; i < Players.length; ++i){
+                    if(Players[i].Nickname < min){
+                        min = Players[i].Nickname;
+                        swap(i, 0);
+                    }
+                }
+                
+                return Players.shift();
+            }
+
+            function findMinAge(){
+                var min = 100000;
+                for(var i = 0; i < Players.length; ++i){
+                    if(Players[i].Age < min){
+                        min = Players[i].Age;
+                        swap(i, 0);
+                    }
+                }
+                
+                return Players.shift();
+            }
+
+            function findMaxPoints(){
+                var max = -1;
+                for(var i = 0; i < Players.length; ++i){
+                    if(Players[i].Point > max){
+                        max = Players[i].Point;
+                        swap(i, 0);
+                    }
+                }
+                
+                return Players.shift();
+            }
+
+            function setPlayer(){
+
+                Players = [];
+                for(var i = 0; i < Names.length; ++i){
+                    var p = new Player(Names[i], Ages[i], Froms[i], Points[i], Ranks[i]);
+                    Players.push(p);
+                }
+
+                var e = document.getElementsByName("radiogroup");
+                var value = -1;
+                var count = 0;
+
+                if(e!=null){
+                    for(var i = 0; i < e.length; ++i){
+                        if(e[i].checked){value = Number(e[i].value);}
+                    }
+                }
+
+                
+                switch(value){
+                    case 0:
+                        while(count < 8){
+                            var p = findName();
+                            p.setData(String(count));    
+                            count++;                   
+                        }
+                        break;
+                    case 1:
+                        while(count < 8){
+                            var p = findMinAge();
+                            p.setData(String(count));    
+                            count++;                   
+                        }
+                        break;
+                    case 2:
+                        while(count < 8){
+                            var p = findMaxPoints();             
+                            p.setData(String(count));    
+                            count++;                   
+                        }
+                        break;
+                }
+                
+            }
+            
+            function buttonDown(eid){
+                eid.style.setProperty("color","black");
+                eid.style.setProperty("background-color","rgba(114, 114, 114, 0.7)");
+            }
+
+            function buttonRelease(eid){
+                eid.style.setProperty("color","azure");
+                eid.style.setProperty("background-color","rgba(20, 20, 20, 0.7)");
+            }
+
+            function mouseHover(e){              
+                e.style.setProperty("color","azure");
+                e.style.setProperty("background-color","red");
+            }
+
+            function mouseOut(e){
+                e.style.setProperty("color","bisque");
+                e.style.setProperty("background-color","transparent");
+            }
+
+        </script>
+    </head>
+
+    <body class = "background" onload="init();">
+         <!--Background Img-->
+         <img class="gradebgimg" src="../imgsrc/bgimg.bmp" alt="background">
+
+        <!--Title Block-->
+        <div class = "title" >
+            <h1 id = "titletxt" style="color: azure;"><em>Excellent Players' Grade</em></h1> 
+        </div>
+        
+        <!--Players Info-->
+        <table id="display" border="2">
+            <tr>
+                <td class="Board" id="0"></td>
+                <td class="Board" id="1"></td>
+                <td class="Board" id="2"></td>
+                <td class="Board" id="3"></td>
+            </tr>
+
+            <tr>
+                <td class="Board" id="4"></td>
+                <td class="Board" id="5"></td>
+                <td class="Board" id="6"></td>
+                <td class="Board" id="7"></td>
+            </tr>
+            
+        </table>
+        
+        <!--Sort Block-->
+        <form action="">
+
+            <div class="answerZone">
+                <div class="checkZone">
+                <label for=""><input type="radio" name="radiogroup" value="0" checked = "checked" >Name Alphabetical</label>
+                <pre>&#9</pre>
+                <label for=""><input type="radio" name="radiogroup" value="1">Age Ascending</label>
+                <pre>&#9</pre>
+                <label for=""><input type="radio" name="radiogroup" value="2">Point Descending</label>
+                </div>
+                <br>
+                <input id="sort" type="button" value = "sort" onclick="setPlayer();" onmousedown="buttonDown(this);" onmouseup="buttonRelease(this);">
+            </div>
+            <hr>
+        </form>     
+        
+        <!--Back to start-->
+        <a class="link" href="StartPage.html" onmouseover="mouseHover(this);" onmouseout="mouseOut(this);">Back to Start</a>
+    </body>
+</html>

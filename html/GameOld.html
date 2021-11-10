@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- @Author: 1809853Z-I011-0045 Wang Yuyang (Kennard Wang) -->
+        <title>GameOld.html</title>
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <link rel="stylesheet" type="text/css" href="../css/project.css">
+        <script type="text/javascript" src="../js/gameOld.js"></script>
+    </head>
+
+    <body class = "background" onload="init();">
+        <!--Background Img-->
+        <img class="bgimg" src="../imgsrc/bgimg.bmp" alt="background">
+
+        <!--Title Block-->
+        <div class = "title" >
+            <h1 id = "titletxt">24 Points</h1>
+            <img src="../imgsrc/title.jpg" alt="24points" height="256" width="256" style="border-radius: 50%;">    
+        </div>
+        <br><br>
+        
+         <!--Card Display-->
+        <div>
+            <table border="5">
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr>
+                <td></td>
+                <td><img id="img1" src="../imgsrc/cards/1c.png" alt="1c" width="90" height="122"></td>
+                <td></td>
+                <td><img id="img2" src="../imgsrc/cards/1d.png" alt="1d" width="90" height="122"></td>
+                <td></td>
+                <td><img id="img3" src="../imgsrc/cards/1h.png" alt="1h" width="90" height="122"></td>
+                <td></td>
+                <td><img id="img4" src="../imgsrc/cards/1s.png" alt="1s" width="90" height="122"></td>
+                <td></td>
+                </tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+            </table>
+        </div>
+        <br><br>
+
+        <!--Answer-->
+        <div>
+            <form action="" method="" class = "answerZone">
+
+                <div id="hint">
+                    <label for="" id = "point">Points: 0</label>        
+                    <label for="" id = "timer">Time: 00:00</label>   
+                    <a class="link" href="Grade.html" onmouseover="mouseHover(this);" onmouseout="mouseOut(this);">Watch Players' Grade</a>       
+                </div>
+
+                <fieldset>
+                    <legend style="color: azure;">Answer</legend>
+                    <input class = "ansButton" id = "ans" type="text"  name = "answer" value="" maxlength="20"/>
+                    <input class = "ansButton" type="button" name="submit" value="Confirm" onclick="verifyAns(getAns('ans'))"/>
+                    <input class = "ansButton" type="reset" name="reset" value="Clear" />
+                    <input class = "ansButton" type="button" name="next" value="Skip" onclick="cardGenerate();"/>
+                </fieldset>
+
+            </form>
+        </div>
+    
+    </body>
+</html>
