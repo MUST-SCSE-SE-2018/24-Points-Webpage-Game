@@ -15,7 +15,7 @@
 ------
 ### Development Environment
 
-|||
+| Description | Specification |
 |:---:|:---:|
 | System | Windows10 |
 | Language | HTML, CSS, Javascript |
