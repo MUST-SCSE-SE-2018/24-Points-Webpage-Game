@@ -18,12 +18,12 @@
 + IDE : **Visual Studio Code 1.46.0**
 ------
 ### Visit Method
-+ Quick Visit : https://kennardwang.github.io/24Points_WebpageGame/index.html
++ Quick Visit : https://kennardwang.github.io/24Points_WebpageGame/login.html
 + Local Visit : **Download ZIP file and visit via your own PC**
 ------
 ### Attention
 + Please start game on StartPage.html. If you enter Game.html page directly, you will find it is just a static webpage!
-+ In index.html
++ In login.html
 
   > The only Player Name/Password is **Kennard/WangYuyang**, otherwise you probably cannot go to the next page! 
 + In StartPage.html
