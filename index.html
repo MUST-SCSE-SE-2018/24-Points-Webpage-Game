@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- @Author: 1809853Z-I011-0045 Wang Yuyang (Kennard Wang) -->
+        <title>index.html</title>
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <link rel="stylesheet" type="text/css" href="project.css">
+        <script>
+
+            // dynamic effect
+            function init(){
+                var radius = 55;
+                var flag = false;
+                var num1 = 0;
+                var num2 = 0;
+                var num3 = 0;
+                var flagColor = true;
+
+                // dynamic img
+                setInterval(function(){
+                    dynamicImg(radius);
+
+                    if(radius==0){flag = true;}
+                    if(radius==55){flag = false;}
+                    
+                    if(flag){radius++;}
+                    else{ radius--;}
+
+                },80);
+
+                // dynamic colorful title
+                setInterval(function(){
+                    changeColor(num1, num2, num3);
+
+                    if(num1==0 && num2 == 0 && num3 ==0){flagColor = true;}
+                    if(num1==255 && num2 == 255 && num3 ==255){flagColor = false;}
+
+                    if(flagColor){
+                        if(num1==255){
+                            if(num2==255){
+                                num3++;
+                            }
+                            else{num2++;}
+                        }
+                        else{num1++;}
+                    }
+                    else{
+                        if(num1==0){
+                            if(num2==0){
+                                num3--;
+                            }
+                            else{num2--;}
+                        }
+                        else{num1--;}
+                    }
+
+                },10);
+            }
+
+            // login verification
+            function login(){
+                window.alert("Do you confirm to login?");
+                
+                var n = document.getElementById("Name");
+                var p = document.getElementById("Pass");          
+                if(n.value=="Kennard" && p.value == "WangYuyang"){
+                   window.open("StartPage.html");
+                }
+                else{
+                    window.alert("Sorry, either your name or password may be incorrect!");
+                }
+            }
+
+            function clear(){
+                var n = document.getElementById("Name");
+                var p = document.getElementById("Pass"); 
+                n.setAttribute("value","");
+                p.setAttribute("value","");
+            }
+
+            function setDefault(){
+                var n = document.getElementById("Name");
+                var p = document.getElementById("Pass"); 
+                n.value = "Kennard";
+                p.value = "WangYuyang";
+            }
+
+            function dynamicImg(num){
+                var e = document.getElementById("titleimg");
+                e.style.setProperty("border-radius", String(num) + "%");
+            }
+
+            function changeColor(num1, num2, num3){
+                var e = document.getElementById("titletxt");
+                e.style.setProperty("color","rgb("+ String(num1) + "," + String(num2) + "," + String(num3) + ")");
+            }
+
+            function highlight(eid){
+                eid.style.setProperty("color","red");
+            }
+
+            function turnBack(eid){
+                eid.style.setProperty("color","white");
+            }
+
+            function mouseHover(e){              
+                e.style.setProperty("color","azure");
+                e.style.setProperty("background-color","red");
+            }
+
+            function mouseOut(e){
+                e.style.setProperty("color","bisque");
+                e.style.setProperty("background-color","transparent");
+            }
+
+        </script>
+    </head>
+
+    <body class = "background" onload="init();">
+        <!--Background Img-->
+        <img class="bgimg" src="imgsrc/bgimg.bmp" alt="background">
+
+        <!--Title Block-->
+        <div>
+            <h1 id = "titletxt" style="color: rgb(0, 0, 0);">24 Points</h1>
+            <img id = "titleimg" src="imgsrc/title.jpg" alt="24points" height="256" width="256" style="border-radius: 50%;">        
+        </div>
+
+        <br><br><br><br>
+        <!--Login Block-->
+        <div>
+            <form action="" method="POST">
+                <fieldset id="loginblock">
+                <legend style="color: azure;">Please Login</legend>
+                <table id="login">
+                    
+                    <tr>
+                        <td><label class="Label" for="">Player Name: </label></td>
+                        <td><input id="Name" type="text" name="name" value = "" maxlength="10"></td>
+                    </tr>
+                    <tr>
+                        <td><label class="Label" for="">Password: </label></td>
+                        <td><input id="Pass" type="password" name = "password" value = "" maxlength="10"></td>
+                    </tr>
+                    <tr><td style="color: transparent;">Space</td></tr>
+                    <tr>
+                        <td></td>
+                        <td id="button">
+                            <input type="submit" name="submit" value="Login" onclick="login();" onmouseover="highlight(this);" onmouseout="turnBack(this);"/>
+                            &nbsp;
+                            <input type="reset" name="reset" value="Clear" onclick="clear();" onmouseover="highlight(this);" onmouseout="turnBack(this);"/>
+                            &nbsp;
+                            <input type="button" name="default" value="Default" onclick="setDefault();" onmouseover="highlight(this);" onmouseout="turnBack(this);"/>
+                        </td>
+                    </tr>
+                </table>
+                </fieldset>
+            </form>
+        </div>
+
+        <!--GitHub Address-->
+        <br><br><br><br>
+        <div><a id="link" style="color: bisque; background-color: transparent;" href="https://github.com/KennardWang?tab=repositories" 
+            onmouseover="mouseHover(this);" onmouseout="mouseOut(this);">Copyright(C)Kennard Wang, 2020.5.5</a></div>
+    </body>
+</html>
