@@ -1,79 +1,102 @@
 # 24-Points-Webpage-Game
 
-> "Make 24 points" is one of Kennard's most favorite games, which is also regarded as a game of intelligence. 
-> The rule is simple : Given 4 poker cards, try to make "24" with "+ - \* /" operators. Kennard wanted to
-> share the game with his friends, and he wrote an online webpage for this.
+<div align="center">
+  <img src="https://img.shields.io/github/stars/KennardWang/24-Points-Webpage-Game" />
+  <img src="https://img.shields.io/github/license/KennardWang/24-Points-Webpage-Game" />
+  <img src="https://img.shields.io/badge/maintenance-No-red" />
+</div>
 
-------
+<br>
 
-### Game Demo
-+ New Version
+<div align=center>
+  <img src="https://kennardwang.github.io/ImageSource/24-Points-Webpage-Game/24pointsNew.png" width="32%" />
+  &nbsp;
+  <img src="https://kennardwang.github.io/ImageSource/24-Points-Webpage-Game/24pointsGrade.png" width="32%" />
+  &nbsp;
+  <img src="https://kennardwang.github.io/ImageSource/24-Points-Webpage-Game/24pointsOld.png" width="32%" />
+</div>
 
-![new](https://kennardwang.github.io/ImageSource/24-Points-Webpage-Game/24pointsNew.png)
+<br>
 
-+ Old Version
+It is a project of MUST course CN105-Web Technology, which is a puzzle game that uses 4 numbers and 4 operators (**+ - \* /**) to calculate 24.
 
-![old](https://kennardwang.github.io/ImageSource/24-Points-Webpage-Game/24pointsOld.png)
 
-+ Grade Board
 
-![grade](https://kennardwang.github.io/ImageSource/24-Points-Webpage-Game/24pointsGrade.png)
+## Table of Contents
 
-------
+- [Development Environment](#development-environment)
+- [Install](#install)
+- [Usage](#usage)
+- [Maintainers](#maintainers)
+- [Contributing](#contributing)
+- [License](#license)
 
-### Development Environment
 
-| Description | Specification |
+
+## Development Environment
+
+| <!-- --> | <!-- --> |
 |:---:|:---:|
-| System | Windows 10 |
+| System | Windows 10 x64 |
 | Language | HTML, CSS, Javascript |
 | IDE | Visual Studio Code 1.46.0 |
 
-------
 
-### Some Tips
-+ Play in online environment
-  > https://kennardwang.github.io/24-Points-Webpage-Game/html/
 
-+ Play in local environment
-  > Please start game from **StartPage.html**. If you start from **Game.html**, you will get a static webpage.
+## Install
+```
+https://github.com/KennardWang/24-Points-Webpage-Game.git
+```
 
-+ About index.html
-  > The Player Name/Password is **Kennard/WangYuyang**, otherwise you cannot login to the next page.
 
-+ About StartPage.html
-  > There are 2 types of mode
-  > + Under **Normal** mode, the range of cards is **1~9**. ( A represents 1 )
-  > + Under **Hard** mode, the range of cards is **1~13**. ( J represents 11, Q represents 12 and K represents 13 ) 
+
+## Usage
+
+You can play [online](https://kennardwang.github.io/24-Points-Webpage-Game/html/) or play in a local environment. If playing locally, please start from **StartPage.html** rather than **Game.html**, otherwise, you will get a static webpage. The description of files are following:
+
++ index.html
+  > It is a login page. The Player Name/Password is **Kennard/WangYuyang**.
+
++ StartPage.html
+  > There are two modes
+  > + Under **Normal** mode, the range of cards is **1~9**. (A = 1)
+  > + Under **Hard** mode, the range of cards is **1~13**. (A = 1, J = 11, Q = 12, K = 13) 
   > <br>
   >
-  > There are also 2 types of form
-  > + If you do not select the checkbox, you will enter into new form ( default ), which has more friendly GUI.
-  > + If you select the checkbox, you will enter into old form, which means you need to play with keyboard.
+  > There are also two versions
+  > + Select the new version (default) without ticking the checkbox. This version has a more friendly GUI, and users can play by mouse-clicking.
+  > + Select the old version by ticking the checkbox. In this version, users need to play with keyboard typing.
 
-+ About Game.html ( New Version )
-  > 1. You need to choose 2 cards in order, then click corresponding operator button to calculate. For example, if you want to calculate **9/3**, you need to choose **9** first and then **3**. After clicking **/** button, the result will be recorded in **result1** ( a black box on your right ).
-  > 2. The **result1** can also be used for calculation ( just like a card ), and you can get **result2** through the same way as **result1**. 
-  > 3. By the way, you can cancel selected cards by clicking them once again as long as you do not click operator button before. 
-  > 4. You can use **Reset** button to clear all your choice and calculated results as well as reset all the cards. 
-  > 5. If you find yourself have no idea to this question, use **Skip** to jump to the next question. After all, we cannot guarantee that all the questions have answers.
-  > 6. If your answer is correct, you will get 24 points !!
++ Game.html (new version)
+  > 1. Users need to choose 2 cards in order, and then click operator button to calculate. For example, calculating "9/3", please choose "9" first and then "3". After clicking "/" button, the result will be recorded in **result1** (a black box on the right).
+  > 2. The **result1** can also be selected for calculation like a card, and you can get **result2** in the same way as **result1**. 
+  > 3. By the way, the selected card can be cancelled by clicking them once again as long as not clicking operator button. 
+  > 4. Users can click **Reset** button to clear all choices and calculated results as well as reset all the cards. 
+  > 5. If having no idea about current puzzle, use **Skip** to jump to the next puzzle. After all, we cannot guarantee that all the puzzles have answers.
+  > 6. Users will get 24 points if their answer is correct.
 
-+ About GameOld.html ( Old Version )
-  > 1. The input must follow this format: For each step, you must add parenthesis to tell clearly which operation executes first. Although "\*" and "/" has higher priority than "+" and "-", you still need to add parenthesis. 
-  > 2. For example, if you want to compute **11+13**, you need to input **(11+13)** instead. Likewise, you need use **((3\*8)+2)** to represent **3*8+2**. Further more, the answer to **3, 11, 1, 11** should be **((11+11)+(3-1))**, you can check your answer by counting pairs of parenthesis. 
-  > 3. Additionally, space is not allowed in your answer. 
-  > 4. If your answer is correct, you will get 24 points !!
++ GameOld.html (old version)
+  > 1. The input must follow this format: For each step, users must add parenthesis to tell clearly which operation executes first. Although "\*" and "/" has higher priority than "+" and "-", but still need to add parenthesis. For example, if wanting to compute "11+13", users need to input "(11+13)" instead. Likewise, please use "((3\*8)+2)" to represent "3*8+2". Furthermore, the answer to "3, 11, 1, 11" should be "((11+11)+(3-1))". A good way to check the answer is checking pairs of parenthesis. 
+  > 2. Additionally, space is not allowed in the answer. 
+  > 3. Users will get 24 points if their answer is correct.
 
-+ About Grade.html
-  > In this page, you can see grades got by excellent and intelligent players. Click **sort** to show results in 3 different orders: **Name Alphabetical**, **Age Ascending** and **Point Descending**.
++ Grade.html
+  > This page demonstrates excellent grades got by intelligent players. Click **sort** to show results in 3 different orders: **Name Alphabetical**, **Age Ascending** and **Point Descending**.
 
-------
 
-### License
-+ [MIT License](https://github.com/KennardWang/24-Points-Webpage-Game/blob/master/LICENSE)
 
-------
+## Maintainers
 
-### Author
-+ Kennard Wang ( 2020.5.20 )
+[@KennardWang](https://github.com/KennardWang).
+
+
+
+## Contributing
+
+Feel free to [open an issue](https://github.com/KennardWang/24-Points-Webpage-Game/issues) or submit [PRs](https://github.com/KennardWang/24-Points-Webpage-Game/pulls).
+
+
+
+## License
+
+[MIT](LICENSE) © Kennard Wang. ( 2020.5.20 )
