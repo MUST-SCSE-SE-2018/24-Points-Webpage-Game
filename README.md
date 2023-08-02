@@ -45,7 +45,7 @@ It is a project of MUST course CN105-Web Technology, which is a puzzle game that
 
 ## Install
 ```
-https://github.com/KennardWang/24-Points-Webpage-Game.git
+git clone https://github.com/KennardWang/24-Points-Webpage-Game.git
 ```
 
 
