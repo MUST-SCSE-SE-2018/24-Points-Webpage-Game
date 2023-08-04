@@ -18,7 +18,7 @@
 
 <br>
 
-It is a project of MUST course CN105-Web Technology, which is a puzzle game that uses 4 numbers and 4 operators (**+ - \* /**) to calculate 24.
+It is a project of MUST course ***CN105-Web Technology***, which is a puzzle game that uses 4 numbers and 4 operators (**+ - \* /**) to calculate 24.
 
 
 
