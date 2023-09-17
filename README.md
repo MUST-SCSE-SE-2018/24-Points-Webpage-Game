@@ -1,10 +1,15 @@
 # 24-Points-Webpage-Game
 
 <div align="center">
-  <img src="https://img.shields.io/github/stars/KennardWang/24-Points-Webpage-Game?style=for-the-badge&color=FDEE21" />
+
+  [![description](https://img.shields.io/badge/project-Individual-1F1F1F?style=for-the-badge)](https://github.com/KennardWang/24-Points-Webpage-Game)
   &nbsp;
-  <img src="https://img.shields.io/github/forks/KennardWang/24-Points-Webpage-Game?style=for-the-badge&color=white" />
+  [![stars](https://img.shields.io/github/stars/KennardWang/24-Points-Webpage-Game?style=for-the-badge&color=FDEE21)](https://github.com/KennardWang/24-Points-Webpage-Game/stargazers)
   &nbsp;
+  [![forks](https://img.shields.io/github/forks/KennardWang/24-Points-Webpage-Game?style=for-the-badge&color=white)](https://github.com/KennardWang/24-Points-Webpage-Game/forks)
+  &nbsp;
+  [![contributors](https://img.shields.io/github/contributors/KennardWang/24-Points-Webpage-Game?style=for-the-badge&color=8BC0D0)](https://github.com/KennardWang/24-Points-Webpage-Game/graphs/contributors)
+  
   <img src="https://img.shields.io/badge/windows-0078D6?logo=windows&logoColor=white&style=for-the-badge" />
   &nbsp;
   <img src="https://img.shields.io/badge/HTML5-E34F26.svg?logo=html5&logoColor=white&style=for-the-badge" />
