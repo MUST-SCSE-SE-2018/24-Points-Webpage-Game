@@ -1,9 +1,19 @@
 # 24-Points-Webpage-Game
 
 <div align="center">
-  <img src="https://img.shields.io/github/stars/KennardWang/24-Points-Webpage-Game" />
-  <img src="https://img.shields.io/github/license/KennardWang/24-Points-Webpage-Game" />
-  <img src="https://img.shields.io/badge/maintenance-No-red" />
+  <img src="https://img.shields.io/github/stars/KennardWang/24-Points-Webpage-Game?style=for-the-badge&color=FDEE21" />
+  &nbsp;
+  <img src="https://img.shields.io/github/forks/KennardWang/24-Points-Webpage-Game?style=for-the-badge&color=white" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/windows-0078D6?logo=windows&logoColor=white&style=for-the-badge" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/HTML5-E34F26.svg?logo=html5&logoColor=white&style=for-the-badge" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/CSS3-1572B6.svg?logo=css3&logoColor=white&style=for-the-badge" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/JavaScript-323330.svg?logo=javascript&logoColor=F7DF1E&style=for-the-badge" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/VSCode-007ACC?logo=visual-studio-code&logoColor=white&style=for-the-badge" />
 </div>
 
 <br>
@@ -87,7 +97,7 @@ You can play [online](https://kennardwang.github.io/24-Points-Webpage-Game/html/
 
 ## Maintainers
 
-[@KennardWang](https://github.com/KennardWang).
+![badge](https://img.shields.io/badge/maintenance-NO-EF2D5E) [@KennardWang](https://github.com/KennardWang)
 
 
 
@@ -99,4 +109,4 @@ Feel free to [open an issue](https://github.com/KennardWang/24-Points-Webpage-Ga
 
 ## License
 
-[MIT](LICENSE) © Kennard Wang. ( 2020.5.20 )
+[![license](https://img.shields.io/github/license/KennardWang/24-Points-Webpage-Game)](LICENSE) © Kennard Wang ( 2020.5.20 )
