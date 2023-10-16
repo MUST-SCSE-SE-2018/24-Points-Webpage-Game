@@ -60,14 +60,14 @@ It is a project of MUST course ***CN105-Web Technology***, which is a puzzle gam
 
 ## Install
 ```
-git clone https://github.com/KennardWang/24-Points-Webpage-Game.git
+git clone https://github.com/MUST-SCSE-SE-2018/24-Points-Webpage-Game.git
 ```
 
 
 
 ## Usage
 
-You can play [online](https://kennardwang.github.io/24-Points-Webpage-Game/html/) or play in a local environment. If playing locally, please start from **StartPage.html** rather than **Game.html**, otherwise, you will get a static webpage. The description of files are following:
+You can play [online](https://must-scse-se-2018.github.io/24-Points-Webpage-Game/html/) or play in a local environment. If playing locally, please start from **StartPage.html** rather than **Game.html**, otherwise, you will get a static webpage. The description of files are following:
 
 + index.html
   > It is a login page. The Player Name/Password is **Kennard/WangYuyang**.
