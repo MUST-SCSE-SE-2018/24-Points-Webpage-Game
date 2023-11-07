@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  [![description](https://img.shields.io/badge/project-Individual-1F1F1F?style=for-the-badge)](https://github.com/KennardWang/24-Points-Webpage-Game)
+  [![description](https://img.shields.io/badge/project-Individual-FFB7C5?style=for-the-badge)](https://github.com/KennardWang/24-Points-Webpage-Game)
   &nbsp;
   [![stars](https://img.shields.io/github/stars/KennardWang/24-Points-Webpage-Game?style=for-the-badge&color=FDEE21)](https://github.com/KennardWang/24-Points-Webpage-Game/stargazers)
   &nbsp;
@@ -24,11 +24,11 @@
 <br>
 
 <div align=center>
-  <img src="https://kennardwang.github.io/ImageSource/24-Points-Webpage-Game/24pointsNew.png" width="32%" />
+  <img src="https://kennardwang.github.io/Image-Source/24-Points-Webpage-Game/24pointsNew.png" width="32%" />
   &nbsp;
-  <img src="https://kennardwang.github.io/ImageSource/24-Points-Webpage-Game/24pointsGrade.png" width="32%" />
+  <img src="https://kennardwang.github.io/Image-Source/24-Points-Webpage-Game/24pointsGrade.png" width="32%" />
   &nbsp;
-  <img src="https://kennardwang.github.io/ImageSource/24-Points-Webpage-Game/24pointsOld.png" width="32%" />
+  <img src="https://kennardwang.github.io/Image-Source/24-Points-Webpage-Game/24pointsOld.png" width="32%" />
 </div>
 
 <br>
